@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting to https://keanelucas.com</title>
-    <meta http-equiv="refresh" content="0; URL=https://keanelucas.com">
-  </head>
-
-  <link rel="canonical" href="https://keanelucas.com">
+<head>
+  <script>
+    // Redirect function
+    function redirect() {
+      // Get the current URL
+      var currentUrl = window.location.href;
+      
+      // Extract the file path after the domain
+      var filePath = currentUrl.replace(/^.*\/\/[^\/]+/, '');
+      
+      // Construct the new URL with the desired domain and the extracted file path
+      var newUrl = 'https://keanelucas.com' + filePath;
+      
+      // Perform the redirect to the new URL
+      window.location.href = newUrl;
+    }
+  </script>
+</head>
+<body onload="redirect()">
+  <h1>Redirecting...</h1>
+</body>
 </html>

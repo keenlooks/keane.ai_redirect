@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Redirect function
+    function redirect() {
+      // Get the current URL
+      var currentUrl = window.location.href;
+      
+      // Extract the file path after the domain
+      var filePath = currentUrl.replace(/^.*\/\/[^\/]+/, '');
+      
+      // Construct the new URL with the desired domain and the extracted file path
+      var newUrl = 'https://keanelucas.com' + filePath;
+      
+      // Perform the redirect to the new URL
+      window.location.href = newUrl;
+    }
+  </script>
+</head>
+<body onload="redirect()">
+  <h1>Redirecting...</h1>
+</body>
+</html>
